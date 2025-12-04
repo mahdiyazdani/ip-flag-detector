@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "IP Flag Detector",
+  "version": "1.0.0",
+  "description": "Shows your public IP and country flag, and updates the extension icon to match the IP location.",
+
+  "action": {
+	"default_popup": "popup.html",
+	"default_icon": {
+	  "16": "icon.png",
+	  "32": "icon.png",
+	  "48": "icon.png",
+	  "128": "icon.png"
+	}
+  },
+
+  "icons": {
+	"16": "icon.png",
+	"32": "icon.png",
+	"48": "icon.png",
+	"128": "icon.png"
+  },
+
+  "permissions": [
+	"notifications"
+  ],
+
+  "host_permissions": [
+	"https://api.ipify.org/*",
+	"https://ipwho.is/*"
+  ],
+
+  "background": {
+	"service_worker": "background.js"
+  },
+
+  "web_accessible_resources": [
+	{
+	  "resources": [ "flags/*.png" ],
+	  "matches": [ "<all_urls>" ]
+	}
+  ]
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>IP &amp; Country</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+				line-height: 1.5;
+				font-size: 14px;
+				background-color: #222;
+				color: #aaa;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				min-width: 260px;
+				padding: 12px;
+				margin: 0;
+			}
+
+			a[href] {
+				color: #1e8ad6;
+				text-decoration: none;
+			}
+
+			a[href]:hover {
+				color: #3ba0e6;
+				text-decoration: underline;
+			}
+
+			hr {
+				height: 1px;
+				background-color: #ccc;
+				border: none;
+				width: 100%;
+				margin: 10px 0;
+			}
+
+			.row {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				margin-bottom: 4px;
+			}
+
+			.row label {
+				font-weight: 600;
+				margin-right: 4px;
+			}
+
+			#flag {
+				height: 14px;
+				margin-left: 4px;
+				vertical-align: middle;
+				display: none;
+			}
+
+			footer {
+				width: 100%;
+				text-align: center;
+				margin-top: 6px;
+			}
+
+			small {
+				font-size: 11px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<label>Your IP:</label>
+			<span id="ip">Detecting&#8230;</span>
+		</div>
+
+		<div class="row">
+			<label>Country:</label>
+			<span id="country"></span>
+			<img id="flag" alt="">
+		</div>
+
+		<hr>
+
+		<footer>
+			<small>
+				Enjoy? Consider
+				<a href="https://out.spegal.dev/coffee-chrome" target="_blank" rel="nofollow">
+					buying me a coffee
+				</a>
+				&#9749;
+			</small>
+		</footer>
+
+		<script src="popup.js"></script>
+	</body>
+</html>
